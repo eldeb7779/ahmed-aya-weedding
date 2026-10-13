@@ -57,7 +57,7 @@ const music=document.getElementById('music');
 const musicButton=document.getElementById('musicButton');
 let musicStarted=false;
 function updateMusicButton(){musicButton.textContent=music.paused?'▶️':'⏸️';}
-async async function startMusic(){
+async function startMusic(){
   if(musicStarted)return;
   try{
     if(music.readyState < 1){

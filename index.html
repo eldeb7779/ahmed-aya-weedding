@@ -57,9 +57,16 @@ const music=document.getElementById('music');
 const musicButton=document.getElementById('musicButton');
 let musicStarted=false;
 function updateMusicButton(){musicButton.textContent=music.paused?'▶️':'⏸️';}
-async function startMusic(){
+async async function startMusic(){
   if(musicStarted)return;
-  try{await music.play();musicStarted=true;}catch(e){}
+  try{
+    if(music.readyState < 1){
+      await new Promise(resolve => music.addEventListener('loadedmetadata', resolve, {once:true}));
+    }
+    music.currentTime = 19;
+    await music.play();
+    musicStarted = true;
+  }catch(e){}
   updateMusicButton();
 }
 document.addEventListener('pointerdown',function(event){
@@ -76,8 +83,13 @@ document.addEventListener('pointerdown',function(event){
 },{passive:true});
 musicButton.addEventListener('click',async function(event){
   event.stopPropagation();
-  if(music.paused){try{await music.play();musicStarted=true;}catch(e){}}
-  else{music.pause();}
+  if(music.paused){
+    try{
+      if(!musicStarted) music.currentTime = 19;
+      await music.play();
+      musicStarted = true;
+    }catch(e){}
+  } else { music.pause(); }
   updateMusicButton();
 });
 window.addEventListener('load',updateMusicButton);

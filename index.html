@@ -1,244 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>دعوة فرح أحمد وآية</title>
-
+<title>دعوة فرح أحمد وآية ❤️</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 20px 12px;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #fff1f6, #fbe1eb, #fffaf5);
-  font-family: 'Cairo', sans-serif;
-  color: #702c4c;
-  text-align: center;
-}
-
-.invitation {
-  max-width: 520px;
-  margin: auto;
-  background: #fffdfb;
-  border: 3px solid #d7b16d;
-  border-radius: 25px;
-  padding: 24px 18px;
-  box-shadow: 0 12px 35px #9b526622;
-  animation: appear 1.2s ease both;
-}
-
-@keyframes appear {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.bismillah {
-  font-size: 23px;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.photo {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-  margin-bottom: 18px;
-}
-
-.welcome {
-  display: inline-block;
-  background: #fae4ed;
-  border-radius: 30px;
-  padding: 8px 18px;
-  font-weight: 800;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 3px #e6a6c1; }
-  to { box-shadow: 0 0 15px #e6a6c1; }
-}
-
-.names {
-  font-size: clamp(34px, 9vw, 48px);
-  font-weight: 900;
-  margin: 15px 0;
-  color: #922f59;
-}
-
-.heart {
-  color: #c74772;
-  display: inline-block;
-  animation: heartbeat 1.2s infinite;
-}
-
-@keyframes heartbeat {
-  50% { transform: scale(1.2); }
-}
-
-.prayer {
-  font-size: 18px;
-  line-height: 2;
-  font-weight: 700;
-}
-
-.date {
-  font-size: 21px;
-  font-weight: 900;
-  margin: 20px 0 12px;
-  color: #946b29;
-}
-
-.venue {
-  line-height: 2;
-  margin: 12px 0 20px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.btn {
-  display: inline-block;
-  background: #87395b;
-  color: white;
-  text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font: inherit;
-  font-weight: 700;
-  animation: none;
-}
-
-.btn.gold {
-  background: #a57b36;
-}
-
-.footer {
-  margin-top: 22px;
-  font-weight: 700;
-}
+*{box-sizing:border-box}
+body{margin:0;padding:20px 12px;min-height:100vh;overflow-x:hidden;background:linear-gradient(135deg,#fff1f6,#fbe1eb,#fffaf5);font-family:'Cairo',sans-serif;color:#702c4c;text-align:center}
+.invitation{position:relative;overflow:hidden;max-width:520px;margin:auto;background:#fffdfb;border:3px solid #d7b16d;border-radius:25px;padding:24px 18px;box-shadow:0 12px 35px #9b526622;animation:appear 1.2s ease both}
+.invitation:before{content:"";position:absolute;inset:5px;border:1px solid #e9c9a0;border-radius:19px;pointer-events:none;animation:borderGlow 3s infinite alternate}
+@keyframes borderGlow{from{box-shadow:inset 0 0 3px #d7b16d}to{box-shadow:inset 0 0 15px #e9b8cd}}
+@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.bismillah{font-size:23px;font-weight:900;margin-bottom:18px}
+.photo{width:100%;display:block;border-radius:18px;margin-bottom:18px;animation:photoFloat 4s ease-in-out infinite}
+@keyframes photoFloat{50%{transform:translateY(-4px)}}
+.welcome{display:inline-block;background:#fae4ed;border-radius:30px;padding:8px 18px;font-weight:800;animation:glow 2s infinite alternate}
+@keyframes glow{from{box-shadow:0 0 3px #e6a6c1}to{box-shadow:0 0 15px #e6a6c1}}
+.names{font-size:clamp(34px,9vw,48px);font-weight:900;margin:15px 0;color:#922f59;animation:nameGlow 3s infinite alternate}
+@keyframes nameGlow{from{text-shadow:0 0 0 #e9a6c0}to{text-shadow:0 0 12px #e9a6c0}}
+.heart{color:#c74772;display:inline-block;animation:heartbeat 1.2s infinite}
+@keyframes heartbeat{50%{transform:scale(1.25)}}
+.prayer{font-size:18px;line-height:2;font-weight:700}
+.date{font-size:21px;font-weight:900;margin:20px 0 12px;color:#946b29}
+.venue{line-height:2;margin:12px 0 20px}
+.buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;background:#87395b;color:white;text-decoration:none;padding:12px 18px;border:0;border-radius:12px;font:inherit;font-weight:700;cursor:pointer;animation:none}
+.btn.gold{background:#a57b36}
+.footer{margin-top:22px;font-weight:700}
+.music-button{margin-top:14px;width:43px;height:43px;padding:0;border-radius:50%;font-size:18px}
+.touch-effect{position:fixed;z-index:9999;pointer-events:none;transform:translate(-50%,-50%);animation:touchRise 2.1s ease-out forwards;text-align:center;white-space:nowrap}
+.touch-heart{font-size:25px;display:block}
+.touch-message{margin-top:3px;padding:4px 9px;border-radius:12px;background:#fffaf0ef;color:#87395b;font-size:12px;font-weight:900;box-shadow:0 2px 10px #b44e6b22}
+@keyframes touchRise{0%{opacity:0;transform:translate(-50%,-35%) scale(.5)}15%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}75%{opacity:1}100%{opacity:0;transform:translate(-50%,-220%) scale(.85)}}
 </style>
 </head>
-
 <body>
 <main class="invitation">
-
   <div class="bismillah">بسم الله الرحمن الرحيم</div>
-
-  <!-- ضع الصورة باسم ahmed-aya-wedding.png بجوار الملف -->
-  <img class="photo"
-       src="ahmed-aya-wedding.png"
-       alt="صورة أحمد وآية">
-
+  <img class="photo" src="ahmed-aya-wedding.png" alt="أحمد وآية">
   <div class="welcome">💗 وبكل الحب ندعيكم 💗</div>
-
-  <div class="names">
-    أحمد <span class="heart">♥</span> آية
-  </div>
-
-  <p class="prayer">
-    اللهم كما أنعمت فتمم،<br>
-    وكما تممت فبارك،<br>
-    وكما باركت فزد.
-  </p>
-
-  <div class="date">
-    السبت · 17 أكتوبر 2026 إن شاء الله
-  </div>
-
-  <div class="venue">
-    <strong>قاعة جحا لاند</strong><br>
-    ميت غمر – الطريق السريع
-  </div>
-
+  <div class="names">أحمد <span class="heart">♥</span> آية</div>
+  <p class="prayer">اللهم كما أنعمت فتمم،<br>وكما تممت فبارك،<br>وكما باركت فزد.</p>
+  <div class="date">السبت · 17 أكتوبر 2026 إن شاء الله</div>
+  <div class="venue"><strong>قاعة جحا لاند</strong><br>ميت غمر – الطريق السريع</div>
   <div class="buttons">
-    <a class="btn gold"
-       href="https://maps.app.goo.gl/BMnSrqsSb34vrLA7A"
-       target="_blank" rel="noopener">
-      ⌖ موقع القاعة
-    </a>
-
-    <button class="btn" id="share">
-      ↗ شارك الدعوة
-    </button>
+    <a class="btn gold" href="https://maps.app.goo.gl/BMnSrqsSb34vrLA7A" target="_blank" rel="noopener">⌖ موقع القاعة</a>
+    <button class="btn" id="share">↗ شارك الدعوة</button>
   </div>
-
-  <div class="footer">
-    وجودكم يكمّل فرحتنا ❤️
-  </div>
-
-  <!-- الأغنية مخفية؛ ضع ملف MP3 بجوار ملف HTML -->
-  <audio id="music" loop preload="auto">
-    <source src="wedding-song.mp3" type="audio/mpeg">
-  </audio>
-
-  <button class="btn" id="musicButton"
-          style="margin-top:14px" aria-label="تشغيل أو إيقاف الأغنية">
-    ▶️
-  </button>
-
+  <div class="footer">وجودكم يكمّل فرحتنا ❤️</div>
+  <audio id="music" loop preload="auto"><source src="wedding-song.mp3" type="audio/mpeg"></audio>
+  <button class="btn music-button" id="musicButton" aria-label="تشغيل أو إيقاف الأغنية">▶️</button>
 </main>
-
 <script>
-const music = document.getElementById('music');
-const musicButton = document.getElementById('musicButton');
-
-function updateMusicButton() {
-  musicButton.textContent = music.paused ? '▶️' : '⏸️';
+const music=document.getElementById('music');
+const musicButton=document.getElementById('musicButton');
+let musicStarted=false;
+function updateMusicButton(){musicButton.textContent=music.paused?'▶️':'⏸️';}
+async function startMusic(){
+  if(musicStarted)return;
+  try{await music.play();musicStarted=true;}catch(e){}
+  updateMusicButton();
 }
-
-musicButton.addEventListener('click', async () => {
-  if (music.paused) {
-    try {
-      await music.play();
-      updateMusicButton();
-    } catch (error) {
-      updateMusicButton();
-    }
-  } else {
-    music.pause();
-    updateMusicButton();
-  }
+document.addEventListener('pointerdown',function(event){
+  startMusic();
+  const el=document.createElement('div');
+  el.className='touch-effect';
+  el.style.left=event.clientX+'px';
+  el.style.top=event.clientY+'px';
+  const hearts=['💗','💕','💖','💘','❤️','💞'];
+  const heart=hearts[Math.floor(Math.random()*hearts.length)];
+  el.innerHTML='<span class="touch-heart">'+heart+'</span><div class="touch-message">أحمد ♥ آية<br>17 أكتوبر 2026 إن شاء الله</div>';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),2200);
+},{passive:true});
+musicButton.addEventListener('click',async function(event){
+  event.stopPropagation();
+  if(music.paused){try{await music.play();musicStarted=true;}catch(e){}}
+  else{music.pause();}
+  updateMusicButton();
 });
-
-// محاولة تشغيل الأغنية عند فتح الصفحة
-window.addEventListener('load', () => {
-  music.play().then(updateMusicButton).catch(updateMusicButton);
-});
-
-// مشاركة الدعوة
-document.getElementById('share').addEventListener('click', async () => {
-  const invitationText =
-    'دعوة فرح أحمد وآية ❤️\n' +
-    '17 أكتوبر 2026 إن شاء الله\n' +
-    'قاعة جحا لاند – ميت غمر\n' +
-    location.href;
-
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: 'دعوة فرح أحمد وآية',
-        text: invitationText
-      });
-    } catch (error) {}
-  } else {
-    window.open(
-      'https://wa.me/?text=' +
-      encodeURIComponent(invitationText),
-      '_blank'
-    );
-  }
+window.addEventListener('load',updateMusicButton);
+document.getElementById('share').addEventListener('click',async function(event){
+  event.stopPropagation();
+  const text='دعوة فرح أحمد وآية ❤️\nالسبت 17 أكتوبر 2026 إن شاء الله\nقاعة جحا لاند – ميت غمر\n'+location.href;
+  if(navigator.share){try{await navigator.share({title:'دعوة فرح أحمد وآية',text});}catch(e){}}
+  else{window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');}
 });
 </script>
 </body>

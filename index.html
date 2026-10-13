@@ -63,7 +63,7 @@ async function startMusic(){
     if(music.readyState < 1){
       await new Promise(resolve => music.addEventListener('loadedmetadata', resolve, {once:true}));
     }
-    music.currentTime = 19;
+    music.currentTime = 1;
     await music.play();
     musicStarted = true;
   }catch(e){}
